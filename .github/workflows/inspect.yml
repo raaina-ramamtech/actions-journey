@@ -12,3 +12,10 @@ jobs:
           ls
       - name: Print file count
         run: ls | wc -l
+      - name: Describe this run
+        run: |
+          echo "Repository: ${{github.repository}}"
+          echo "ref: ${{github.ref}}"
+          echo "sha: ${{github.sha}}"
+          echo "event: ${{github.event}}"
+          echo "actorr: ${{github.actor}}"
