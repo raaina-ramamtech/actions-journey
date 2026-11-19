@@ -12,6 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: build
+    steps:
+      - name: test
+        run: echo "test completeeeeeeeeeeeeeeeeeee"
   deploy:
     runs-on: ubuntu-latest
     needs: [build, test]
