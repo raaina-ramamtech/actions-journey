@@ -1,0 +1,8 @@
+name: Repo var demo
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo region
+        run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"
