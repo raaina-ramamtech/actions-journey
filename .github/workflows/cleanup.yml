@@ -1,0 +1,13 @@
+name: name
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start test database
+        run: echo "start db"
+      - name: Flaky check
+        run: echoo hello
+      - name: Stop test database
+        if: always()
+        run: echo "stop db"
