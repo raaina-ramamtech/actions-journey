@@ -1,4 +1,3 @@
-name: matrix
 on: push
 jobs:
   test:
