@@ -1,0 +1,11 @@
+name: Gated deploy
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run tests
+        run: echo run tests
+      - name: Deploy
+        if: github.ref == '/refs/heads/main'
+        run: echo deploy
