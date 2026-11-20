@@ -1,7 +1,7 @@
 name: matrix
 on: push
 jobs:
-  python:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
