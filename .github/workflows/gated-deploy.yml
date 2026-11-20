@@ -1,5 +1,5 @@
 name: Gated deploy
-on: push
+on: [push, pull_request]
 jobs:
   deploy:
     runs-on: ubuntu-latest
