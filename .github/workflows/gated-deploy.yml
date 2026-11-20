@@ -7,5 +7,5 @@ jobs:
       - name: Run tests
         run: echo run tests
       - name: Deploy
-        if: github.ref == '/refs/heads/main'
+        if: github.ref == 'refs/heads/main'
         run: echo deploy
