@@ -1,0 +1,24 @@
+name: handoff
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build artifact
+        run: date >> app.txt
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-package
+          path: app.txt
+          retention-days: 13
+  verify:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-package
+      - name: verify
+        run: test -f app.txt
