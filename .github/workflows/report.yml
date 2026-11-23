@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build report.txt
-        run: cat date >> report.txt
+        run: date >> report.txt
       - name: Build report
         uses: actions/upload-artifact@v4
         with:
