@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: something
 on: push
 jobs:
@@ -17,3 +18,15 @@ jobs:
     steps:
       - name: echo again
         run: echo package
+=======
+name: trigger
+on: push
+jobs:
+  job:
+    uses: ./.github/workflows/notify.yml
+    with:
+      environment: some-env
+    secrets:
+      NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
+
+>>>>>>> 85a0440 (passing input and secret to workflow)
