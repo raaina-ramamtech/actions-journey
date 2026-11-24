@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-name: something
-on: push
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: just echo
-        run: echo linter runinng
-  unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: just echo again
-        run: echo running unut-tests
-  package:
-    runs-on: ubuntu-latest
-    needs: [lint, unit-tests]
-    steps:
-      - name: echo again
-        run: echo package
-=======
+
 name: trigger
 on: push
 jobs:
@@ -28,5 +8,3 @@ jobs:
       environment: some-env
     secrets:
       NOTIFY_TOKEN: ${{ secrets.NOTIFY_TOKEN }}
-
->>>>>>> 85a0440 (passing input and secret to workflow)
