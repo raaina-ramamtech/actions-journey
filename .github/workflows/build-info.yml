@@ -7,4 +7,4 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v4
       - name: use local action
-        uses: ./.github/actions/build-info/action.yml
+        uses: ./.github/actions/build-info
