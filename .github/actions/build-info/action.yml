@@ -1,4 +1,5 @@
 name: build-info
+description: description
 runs:
   using: composite
   steps:
