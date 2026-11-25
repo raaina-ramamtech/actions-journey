@@ -1,0 +1,10 @@
+name: build-info
+runs:
+  using: composite
+  steps:
+    - run: echo " Branch $GITHUB_REF_NAME"
+      shell: bash
+    - run: echo "commit $GITHUB_SHA"
+      shell: bash
+    - run: ls -a
+      shell: bash
