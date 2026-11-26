@@ -1,0 +1,14 @@
+name: tidy
+on: push
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  printing:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout the repo
+        run: actions/checkout@v4
+      - name: list the files
+        run: ls -a
